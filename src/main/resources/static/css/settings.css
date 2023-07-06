@@ -1,0 +1,324 @@
+.staffDiv{
+    background-color: var(--bs-dark);
+    color: white;
+    height: 2.5em;
+    margin: 0.5em 0;
+    border-radius: 0.5em;
+    font-size: 1.5em;
+}
+
+.staffDiv:hover{
+    transition: background-color 0.5s ease;
+    background-color: var(--bs-gray-800);
+}
+
+.staffListCol{
+    width: 80%;
+    margin: auto;
+}
+
+.deleteStaffButton{
+    height: 2em;
+    margin-top: 0.9em;
+    margin-right: 1em;
+    border: 0;
+}
+
+.modifyStaffButton{
+    height: 2em;
+    margin-top: 0.9em;
+    margin-right: 1em;
+    border: 0;
+}
+
+p.staffName{
+    margin-top: 0.5em;
+    margin-left: 1em;
+}
+
+.openStaffModalButton{
+    right: 0;
+    margin-bottom: 1em;
+}
+
+.modalLabel{
+    margin-top: 1.5em;
+}
+
+.modal-header{
+    background-color: var(--bs-dark);
+    color: white;
+}
+
+.crossButton{
+    color: white !important;
+}
+
+.modal-footer{
+    margin-top: 1em;
+}
+
+/* https://codepen.io/RazorXio/pen/gMaoOW */
+.button_slide {
+    color: #FFF;
+    /* border: 2px solid rgb(216, 2, 134); */
+    /* border-radius: 0px;
+    padding: 18px 36px;
+    display: inline-block; */
+    /* font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: 1px; */
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 var(--bs-blue);
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+.slide_right:hover {
+    box-shadow: inset 200px 0 0 0 var(--bs-blue);
+}
+
+.slide_left:hover {
+    box-shadow: inset 0 0 0 20px var(--bs-primary);
+}
+
+#outer {
+    width: 364px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+}
+
+/* --------  SUBNAVBAR  --------- */
+
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} */
+
+/* html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+  background: #f2f2f2;
+} */
+
+.wrapper{
+  height: 4em;
+  width: 100%;
+  background-color: var(--bs-dark);
+  line-height: 4em;
+  border-radius: 50px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+  place-items: center;
+  text-align: center;
+  margin-bottom: 4em;
+}
+.wrapper .customNav{
+  position: relative;
+  display: flex;
+}
+.wrapper .customNav label{
+  flex: 1;
+  width: 100%;
+  z-index: 1;
+  cursor: pointer;
+}
+.wrapper .customNav label a{
+  position: relative;
+  z-index: -1;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.6s ease;
+}
+
+.wrapper .customNav label a i{
+  font-size: 25px;
+  margin: 0 7px;
+}
+.wrapper .customNav .tab{
+  position: absolute;
+  height: 4em;
+  width: 16.666%; /* 100/6 */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#courses:checked ~ .tab   {
+  left: 16.666%;
+}
+#lessons:checked ~ .tab{
+  left: 33.332%;
+}
+#items:checked ~ .tab{
+  left: 49.998%;
+}
+#subscriptions:checked ~ .tab{
+  left: 66.664%;
+}
+#rental:checked ~ .tab{
+  left: 83.333%;
+}
+.wrapper .customNav input{
+  display: none;
+}
+
+.customTab{
+/*   height: 10em;
+    width: 20em; */
+    display: none;
+    width: auto;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+.coursesTab{
+  display: none;
+}
+
+
+
+/* #staffPanel{
+    background-color: #343a40;
+} */
+
+/* #coursesPanel{
+    background-color: #1889fa;
+    width: 30em;
+    height: 30em;
+} */
+
+.firstTab{
+    display: block;
+}
+
+
+/* --------   SUBSCRIPTIONS   ------ */
+.phraseDiv{
+  height: 2.5em;
+  font-size: 1.2em;
+  margin-top: 1.5em;
+}
+
+.phraseCol{
+  background-color: var(--bs-dark);
+  border-top-left-radius: 0.3em;
+  border-bottom-left-radius: 0.3em;
+  color: white;
+}
+
+.deleteCol{
+  background-color: var(--bs-dark);
+  border-top-right-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+}
+
+.delPhraseButton{
+  margin-top: 0.5em;
+}
+
+.phrase{
+  padding-top: 0.8em;
+}
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.newPhraseDiv{
+  margin-top: 2em;
+}
+
+.addPhraseButton{
+  border-radius: 100%;
+  padding: 0;
+  height: 1.5em;
+  width: 1.5em;
+  margin: auto;
+  margin-top: 0.8em;
+  font-size: 2em !important;
+}
+
+.form__group{
+  width: 100% !important;
+}
+
+.confirmPriceButton{
+  border-radius: 100%;
+  margin-top: 0.8em;
+  padding: 0;
+  height: 1.5em;
+  width: 1.5em;
+  font-size: 2em !important;
+}
+
+
+
+
+
+/* --- css for courses panel --- */
+
+.courseRow{
+  background-color: var(--bs-dark);
+  color: white;
+  margin-top: 1em;
+  border-radius: 0.3em;
+  width: 80%;
+  height: 2.5em;
+  font-size: 1.5em;
+}
+
+.courseName{
+  margin-top: 0.5em;
+  margin-left: 1em;
+}
+
+.courseRow a{
+  margin-top: 0.7em;
+  width: 6em;
+}
+
+.courseRow button{
+  margin-top: 0.7em;
+  width: 6em;
+}
+
+/* .addIcon{
+  font-size: 2em !important;
+  font-weight: 500 !important;
+  margin-top: -0.1em;
+}
+ */
+
+
+#dropdownCategories{
+  height: 2.5em;
+  width: 12em;
+}
+
+#addCourseButton{
+  height: 2.5em;
+  width: 12em;
+  padding: 0;
+  margin: 0;
+  padding-top: 0.5em;
+}
+
+#dropdownCategoriesText{
+  margin-right: 0.5em;
+}

@@ -1,0 +1,107 @@
+.containerItemLoan{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.titleData{
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.rowTitle{
+  margin-top: 14px;
+}
+
+.loanData{
+  background-color: var(--dark);
+  color: white;
+  border-radius: 0.5em;
+  margin-right: 1em;
+  margin-left: 1em;
+  padding: 0.4em;
+}
+
+.userLoanData{
+  background-color: var(--dark);
+  color: white;
+  border-radius: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding: 0.4em;
+}
+
+.loanContainer{
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  /* background-color: var(--dark);
+  color: white;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 1em;
+  border-radius: 0.5em; */
+}
+
+.loanData{
+  
+}
+
+.lastColLoanData{
+/*   border-style: solid;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 2px;
+  border-color: rgba(255, 255, 255, 0.764); */
+}
+
+.dataName{
+  background-color: var(--darkSecondary);
+  border-radius: 0.5em;
+  padding: 0.1em;
+
+}
+
+.btnEndLoanContainer{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.makeEndLoanBtn{
+
+  padding: 2px;
+  height: 70%;
+  padding-left: 4px;
+  padding-right: 4px;
+
+}
+
+
+#btnUndoEndLoan{
+  color: white;
+  background-color: var(--main-blue);
+}
+
+
+.lateLoanText{
+  color: red;
+}
+
+.accordion-button{
+  color: white;
+  background-color: var(--dark);
+}
+
+.accordion-button::after{
+  background-color: white;
+  border-radius: 100%;
+  padding: 12px;
+
+  background-size: 80%;
+  background-position: center;
+
+}
+
+.toast{
+  background-color: rgba(255, 255, 255, 0.90);
+}

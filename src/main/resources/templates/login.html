@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html class="h-100" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:replace="fragments/head :: header" />
+    <link rel="stylesheet" th:href="@{/css/login.css}" href="css/login.css" type="text/css" />
+    <title>Login</title>
+</head>
+
+<body class="d-flex flex-column h-100 totalBody">
+    <header th:replace="fragments/nav.html :: nav"></header>
+
+    <div class="col loginBody text-center">
+        <form class="form-signin" id="loginForm" method="post" th:action="@{/login}">
+            <h2 class="form-signin-heading">Inicie sesión</h2>
+            <div class="form__group field">
+                <input type="input" class="form-control form__field" placeholder="Nombre de usuario" name="username" id='username' required />
+                <label for="username" class="form__label">Nombre de usuario</label>
+            </div>
+            <div class="form__group field">
+                <input type="password" class="form-control form__field" placeholder="Password" id='password' name="password" required />
+                <label for="password" class="form__label">Contraseña</label>
+            </div>
+            <button class="btn btn-lg btn-block loginButton customButton" type="submit">Iniciar sesión</button>
+        </form>
+    </div>
+
+
+</body>
+<th:block th:replace="fragments/footer.html :: footer" />
+</html>

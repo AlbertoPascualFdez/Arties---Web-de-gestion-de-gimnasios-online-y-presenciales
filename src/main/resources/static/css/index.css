@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
+
+
+#bannerDiv{
+  position: relative;
+}
+
+#banner{
+  object-fit: cover;
+  object-position:50%;
+  height: 25vw;
+  width: 100%;
+  background-color: #90f1ef;
+  margin-top: -1px; /* para q no se vea una linea blanca entre la navbar y la img */
+  /* margin-bottom: 20em; */
+}
+
+#blackFilter{
+  position: absolute;
+  height: 25vw;
+  width: 100%;
+  background-color: #00000090;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+#bannerSentence{
+  padding-top: 10%;
+  color: white;
+  font-size: 3em;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+
+
+.firstDiv{
+  margin-top: 4em;
+  position: relative;
+}
+
+.carouselLeftArrow{
+  position: absolute;
+  top: 30%;
+  left: 9%;
+  grid-column: 1;
+  grid-row: 2 / 3;
+}
+
+.carouselRightArrow{
+  position: absolute;
+  top: 30%;
+  left: 90em;
+}
+
+.arrowButton{
+  /* text-align: center;
+  border-radius: 100%; */
+  height: 1.5em;
+  width: 1em;
+  font-size: 6em;
+}
+
+/* .arrowIcon{
+  margin-top: -0.45em;
+  padding-top: 0;
+} */
+
+.descField{
+  min-height: 4em;
+}
+
+/* Codigo adaptado de https://freefrontend.com/css-carousels/ */
+.carouselDiv {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  main#carouselMain {
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    width: 95vw;
+    height: 28em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    /* perspective: 600px; */
+    perspective: 41em;
+    --items: 5;
+    --middle: 3;
+    --position: 1;
+    /* pointer-events: none; */
+  }
+  
+  div.item {
+    position: absolute;
+    /* width: 300px;
+    height: 400px; */
+    /* background-color: coral; */
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    transform: rotateY(calc(-10deg * var(--r)))
+      translateX(calc(-300px * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
+  }
+  
+  div.item:nth-of-type(1) {
+    --offset: 1;
+   /*  background-color: #90f1ef; */
+  }
+  div.item:nth-of-type(2) {
+    --offset: 2;
+   /*  background-color: #ff70a6; */
+  }
+  div.item:nth-of-type(3) {
+    --offset: 3;
+   /*  background-color: #ff9770; */
+  }
+  div.item:nth-of-type(4) {
+    --offset: 4;
+   /*  background-color: #ffd670; */
+  }
+  div.item:nth-of-type(5) {
+    --offset: 5;
+    /* background-color: #e9ff70; */
+  }
+  
+  input:nth-of-type(1) {
+    grid-column: 2;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(1):checked ~ main#carouselMain {
+    --position: 1;
+  }
+  
+  input:nth-of-type(2) {
+    grid-column: 3;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(2):checked ~ main#carouselMain {
+    --position: 2;
+  }
+  
+  input:nth-of-type(3) {
+    grid-column: 4;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(3):checked ~ main#carouselMain {
+    --position: 3;
+  }
+  
+  input:nth-of-type(4) {
+    grid-column: 5;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(4):checked ~ main#carouselMain {
+    --position: 4;
+  }
+  
+  input:nth-of-type(5) {
+    grid-column: 6;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(5):checked ~ main#carouselMain {
+    --position: 5;
+  }
+
+
+  .itemsContainerCol{
+    transform: skewX(340deg);
+    /* position: absolute;
+    right: 0; */
+  }
+
+  .itemsSection{
+    margin-top: 4vw;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .itemsSeccionContainer{
+    /* overflow-x: hidden; */
+
+    /* background: linear-gradient(270deg,var(--main-blue),var(--main-blue-disabled)); */
+    background: linear-gradient(-45deg, #1f6bbc, #48fbc8, #051286, #16a4e5);
+    background-size: 400% 400%;
+    /* transform: skewX(340deg); */
+    width: 100%;
+    padding: 4em;
+    animation: gradient 25s ease infinite;
+  }
+
+  .itemsSeccionContainer .col-5{
+    transform: skewX(-340deg);
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+.colDescLoan{
+  margin-left: 8em;
+  margin-right: 5em;
+  margin-bottom: 2em;
+}
+
+.colDescLoan h1{
+/*   padding-left: 5em;
+  padding-right: 5em; */
+
+}
+
+.colDescLoan h3{
+  margin-top: 0.2em;
+}
+
+.colDescLoan h5{
+  text-align: justify;
+  margin-top: 1vw;
+}
+
+
+.colDescLoan h5:first-of-type{
+  margin-top: 2vw;
+}
+
+
+
+.colDescLoan h2{
+  
+  margin-top: 3vw;
+}
+
+.colDescLoan button{
+  font-size: x-large;
+  background: linear-gradient(90deg,#219fbe ,#1495d1 , #1729c9, #1f6bbc);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 2vw;
+}
+
+.colDescLoan button:hover{
+  filter: grayscale(18%);
+}
+
+.itemsSeccionContainer .myColW:last-child{
+  margin-bottom: 0px
+}
+
+
+
+
+.lessonsSection{
+  margin-top: 5vw;  background: linear-gradient(270deg,#219fbe ,#1495d1 , #1729c9, #1f6bbc);
+  background-size: 400% 400%;
+  animation: gradient 60s ease infinite;
+}
+
+.lessonsSection h1{
+  color:white;
+
+  padding: 1.5vw;
+}
+
+.infoLessonTitle{
+  margin-left: 3vw;
+}
+
+.colTextLesson{
+  color: white;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  
+}
+.colTextLesson h4{
+ /*  text-align: justify; */
+}
+
+.lessonExtraContainer{
+padding-left: 5vw;
+  margin-top: 5vw;
+
+    position: relative;
+    overflow: hidden;
+  
+}
+
+.lessonInfoContainer{
+  color: white;
+  background: linear-gradient(-45deg, #1f6bbc, #21a47f, #051286, #158dc5);
+  background-size: 400% 400%;
+  /* transform: skewX(340deg); */
+  transform: skewX(340deg);
+  width: 100%;
+  padding: 4em;
+  animation: gradient 25s ease infinite;
+  margin-left: -11vw;
+}
+
+.lessonInfoContainer h2{
+  margin-left: 8vw;
+  transform: skewX(-340deg);
+}
+
+.removeSkew{
+  transform: skewX(-340deg);
+}
+
+.lessonInfoContainer h4{
+  margin-left: 8vw;
+ 
+}
+
+.buttonShowLessons{
+  margin-top: 2em;
+  border-style: solid;
+  border-color: white;
+  border-radius: 0.2em;
+  border-width: 2px;
+  display: inline-block;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+}
+
+.buttonShowLessons:hover{
+background-color: rgba(95, 95, 95, 0.364);
+cursor: pointer;
+
+}
+
+.extraInfoLesson2{
+/* height: fit-content; */
+height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6vw;
+}
+
+.extraInfoLesson2 button{
+  font-size: x-large;
+  background: linear-gradient(90deg,#219fbe ,#1495d1 , #1729c9, #1f6bbc);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 2vw;
+  
+}
+
+.extraInfoLesson2 button:hover{
+  filter: grayscale(18%);
+}
+
+.titleCourses{
+  margin-top: 2vw;
+
+}
+
+.noMarginRight{
+  margin-right: 0px;
+}
+
+/* a {
+  all: unset;
+}
+a:hover{
+  all: unset;
+} */
+
+.item a{
+  color: white;
+}
+
+
+
+@media (min-width:1600px) {
+  .colDescLoan h5:first-of-type{
+    margin-top: 5vw;
+  }
+
+  .colDescLoan h1{
+    margin-top: 3vw;
+    
+    }
+
+    .colDescLoan button{
+      font-size: xx-large;
+      margin-top: 3vw;
+    }
+
+    .colDescLoan button:hover{
+      filter: grayscale(18%);
+    }
+
+    .lessonInfoContainer{
+      color: white;
+      background: linear-gradient(-45deg, #1f6bbc, #21a47f, #051286, #158dc5);
+      background-size: 400% 400%;
+      /* transform: skewX(340deg); */
+      transform: skewX(340deg);
+      width: 100%;
+      padding: 4em;
+      animation: gradient 25s ease infinite;
+      margin-left: -10vw;
+    }
+}
+
+
+@media (max-width: 740px) {
+  .extraInfoLesson2 h2 {
+    margin-top: 1em;
+  }
+  .extraInfoLesson2 button {
+    margin-bottom: 2em;
+  }
+
+  #bannerSentence{
+    font-size: x-large;
+  }
+
+  .itemsCards .myColW{
+    width: 100%;
+    margin: 0;
+    margin-left: 0;
+    margin-bottom: 1em;
+  }
+
+  .itemsCards .card2{
+    margin-left: 2em;
+    padding: 0.2em;
+  }
+
+  .itemsCards{
+    padding-right: 2em;
+  }
+
+  .itemsSection .col-sm-6{
+    /* width: 100%; */
+  }
+
+  .colDescLoan{
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 2em;
+  }
+  
+  .colDescLoan h1{
+  /*   padding-left: 5em;
+    padding-right: 5em; */
+  
+  }
+  
+  .colDescLoan h3{
+    margin-top: 0.2em;
+  }
+  
+  .colDescLoan h5{
+    text-align: justify;
+    margin-top: 3vw;
+  }
+  
+  
+  .colDescLoan h5:first-of-type{
+    margin-top: 6vw;
+  }
+  
+  
+  
+  .colDescLoan h2{
+    
+    margin-top: 8vw;
+  }
+
+  
+
+}
+
+  
+
+
+
+  
